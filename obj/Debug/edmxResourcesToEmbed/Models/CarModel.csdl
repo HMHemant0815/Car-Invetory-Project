@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InterviewModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cars_master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="car_brand" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="car_model" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="year" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="price" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="isNew" Type="Boolean" />
+    <Property Name="user_Id" Type="Int32" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="SqlConnection" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cars_master" EntityType="Self.cars_master" />
+  </EntityContainer>
+</Schema>

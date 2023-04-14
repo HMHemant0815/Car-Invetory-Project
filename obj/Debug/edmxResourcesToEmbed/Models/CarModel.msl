@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InterviewModelStoreContainer" CdmEntityContainer="SqlConnection">
+    <EntitySetMapping Name="cars_master">
+      <EntityTypeMapping TypeName="InterviewModel.cars_master">
+        <MappingFragment StoreEntitySet="cars_master">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="car_brand" ColumnName="car_brand" />
+          <ScalarProperty Name="car_model" ColumnName="car_model" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="isNew" ColumnName="isNew" />
+          <ScalarProperty Name="user_Id" ColumnName="user_Id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

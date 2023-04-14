@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InterviewModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="user_master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="full_name" Type="varchar" MaxLength="40" />
+    <Property Name="email" Type="varchar" MaxLength="40" />
+    <Property Name="mobile" Type="varchar" MaxLength="13" />
+    <Property Name="password" Type="varchar" MaxLength="40" />
+    <Property Name="created_at" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="InterviewModel1StoreContainer">
+    <EntitySet Name="user_master" EntityType="Self.user_master" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
